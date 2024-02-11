@@ -1,1 +1,54 @@
-<p>uncommon-page works!</p>
+
+<p-card styleClass="shadow-5 mb-5">
+    <h1>Pipes No comunes</h1>
+    <p>
+        Pipes incluidos en Angular - Usualmente en el Common Module
+    </p>
+</p-card>
+
+
+
+<div class="grid">
+
+    <div class="col-12 sm:col-6">
+        <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+            <p>Saludos {{ name }}, es un placer {{ gender | i18nSelect:invitationMap }} a nuestro evento.</p>
+            <p-button
+                (click)="changeClient()"
+                label="Cambiar persona"
+            >
+
+            </p-button>
+        </p-fieldset>
+    </div>
+
+    <div class="col-12 sm:col-6">
+        <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+        </p-fieldset>
+    </div>
+
+    <div class="col-12 sm:col-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+
+        </p-fieldset>
+    </div>
+
+    <div class="col-12 sm:col-6">
+        <p-fieldset legend="JSON Pipe" [toggleable]="true">
+
+        </p-fieldset>
+    </div>
+
+    <div class="col-12 sm:col-6">
+        <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+
+        </p-fieldset>
+    </div>
+
+    <div class="col-12 sm:col-6">
+        <p-fieldset legend="Async Pipe" [toggleable]="true">
+
+        </p-fieldset>
+    </div>
+
+</div>

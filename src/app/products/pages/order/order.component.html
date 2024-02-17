@@ -22,6 +22,7 @@
     <div class="p-toolbar-group-end">
 
         <button 
+            (click)="changeOrder('name')"        
             label="Por nombre" 
             pButton 
             icon="pi pi-print" 
@@ -30,6 +31,7 @@
         </button>
 
         <button 
+            (click)="changeOrder('canFly')"        
             label="Por volar" 
             pButton 
             icon="pi pi-upload" 
@@ -38,6 +40,7 @@
         </button>
 
         <button 
+            (click)="changeOrder('color')"        
             label="Por color" 
             pButton 
             icon="pi pi-upload"
@@ -51,7 +54,7 @@
     <div class="col mt-5 shadow-5">
 
 
-        <p-table [value]="heroes" [tableStyle]="{ 'min-width': '50rem' }">
+        <p-table [value]="heroes | sortBy:orderBy " [tableStyle]="{ 'min-width': '50rem' }">
             <ng-template pTemplate="header">
                 <tr>
                     <th>Nombre</th>
